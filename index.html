@@ -381,10 +381,6 @@ footer .wrap {
     document.getElementById('contactBtn').addEventListener('click',()=>modal.classList.add('show'));
     document.getElementById('closeModal').addEventListener('click',()=>modal.classList.remove('show'));
     modal.addEventListener('click',(e)=>{ if(e.target===modal) modal.classList.remove('show') });
-
-    // Simple accessibility: pause video on small screens to save data
-    const vid = document.querySelector('video');
-    if(window.innerWidth < 700 && vid){ vid.pause(); }
   </script>
 </body>
 </html>
