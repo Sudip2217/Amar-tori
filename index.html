@@ -381,6 +381,17 @@ footer .wrap {
     document.getElementById('contactBtn').addEventListener('click',()=>modal.classList.add('show'));
     document.getElementById('closeModal').addEventListener('click',()=>modal.classList.remove('show'));
     modal.addEventListener('click',(e)=>{ if(e.target===modal) modal.classList.remove('show') });
+
+    // Limit video playback time (10 seconds)
+if (vid) {
+  const limitSeconds = 10;
+  vid.addEventListener('timeupdate', () => {
+    if (vid.currentTime >= limitSeconds) {
+      vid.pause();
+      vid.currentTime = 0;
+    }
+  });
+}
   </script>
 </body>
 </html>
