@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cottage for Sale — Team 7 Showcase</title>
-  <link rel="icon" href="img/Team7 logo.png" />
+  <title>Amar Taree Cottage — for Sale </title>
+  <link rel="icon" href="img/Logo 3.jpg" />
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <style>
     :root{
@@ -117,6 +117,61 @@
       .gallery .main-img{height:260px}
       .thumbs img{width:56px;height:56px}
     }
+
+/* Keep container padding balanced */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.25rem;
+}
+
+/* Map + location section better spacing and wrapping */
+section[style*="margin-top:2rem"][style*="box-shadow"] > div {
+  align-items: flex-start;
+}
+
+/* Responsive map section */
+@media (max-width: 900px) {
+  section[style*="margin-top:2rem"][style*="box-shadow"] > div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  section[style*="margin-top:2rem"][style*="box-shadow"] iframe {
+    width: 100% !important;
+    height: 250px !important;
+  }
+
+  section[style*="margin-top:2rem"][style*="box-shadow"] > div > div:first-child {
+    max-width: 100%;
+  }
+}
+
+/* Contact form & right column alignment fix */
+@media (max-width: 980px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .contact-card {
+    width: 100%;
+    position: relative;
+  }
+
+  .contact-card .card {
+    width: 100%;
+  }
+}
+
+/* Footer alignment & wrapping */
+footer .wrap {
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
   </style>
 </head>
 <body>
@@ -130,10 +185,10 @@
 
     <div class="overlay">
       <div class="brand">
-        <img src="img/Team7 logo.png" alt="logo">
+        <img src="img/Logo 3.jpg" alt="logo">
         <div>
-          <div style="font-size:13px;color:rgba(255,255,255,0.85);letter-spacing:1px">Amar Tori — Property Showcase</div>
-          <h1>Beautiful 2‑BHK Lakeside Cottage</h1>
+          <div style="font-size:13px;color:rgba(255,255,255,0.85);letter-spacing:1px">Amar Taree — Property Showcase</div>
+          <h1>Beautiful 2‑BHK Cottage</h1>
         </div>
       </div>
       <p class="lead">A cozy cottage with private gardens, lake view and modern comforts — perfect for weekend getaways or a permanent retreat.</p>
@@ -159,13 +214,14 @@
         <!-- Gallery -->
         <section id="gallery" class="gallery">
           <div class="main-img" id="mainImg">
-            <img src="img/Cottage view 5.jpg" alt="cottage main">
+            <img src="img/Cottage view 1.jpg" alt="cottage main">
           </div>
           <div class="thumbs" id="thumbs">
             <img src="img/Cottage view 1.jpg" alt="thumb1" class="active">
             <img src="img/Cottage view 2.jpg" alt="thumb2">
             <img src="img/Cottage view 3.jpg" alt="thumb3">
             <img src="img/Cottage view 4.jpg" alt="thumb4">
+            <img src="img/Cottage view 5.jpg" alt="thumb4">
           </div>
 
           <div style="margin-top:1rem;display:flex;gap:12px;align-items:center;justify-content:space-between">
@@ -177,9 +233,12 @@
         <!-- Details -->
         <section id="details" class="details" style="margin-top:1.5rem">
           <div class="meta">
-            <div class="chip">2 Bedrooms</div>
-            <div class="chip">1 Bath</div>
+            <div class="chip">3 Bedrooms</div>
+            <div class="chip">2 Living Rooms</div>
             <div class="chip">1200 sqft</div>
+            <div class="chip">2 kitchen Ro0ms</div>
+            <div class="chip">Guest Rooms</div>
+            <div class="chip">Swimming Pool</div>
             <div class="chip">Private Garden</div>
           </div>
 
@@ -189,7 +248,7 @@
               <div class="price-big">₹ 28,50,000</div>
             </div>
             <div style="text-align:right">
-              <div style="color:var(--muted);font-size:13px">Listed by Amar Tori</div>
+              <div style="color:var(--muted);font-size:13px">Listed by Amar Taree</div>
               <div style="font-weight:700">Mobile: +91 987654321</div>
             </div>
           </div>
@@ -208,9 +267,9 @@
             <div style="margin-top:1rem">
               <h4 style="margin-bottom:8px">Location & Highlights</h4>
               <ul style="color:var(--muted);line-height:1.6">
-                <li>Peaceful rural setting with good road access</li>
-                <li>Nearby market & basic healthcare within 15 minutes</li>
-                <li>Suitable for family, retreat or short‑stay rentals</li>
+                <li> Peaceful rural setting with good road access</li>
+                <li> Nearby market & basic healthcare within 15 minutes</li>
+                <li> Suitable for family, retreat or short‑stay rentals</li>
               </ul>
             </div>
           </div>
@@ -235,7 +294,7 @@
         <div class="card">
           <h3>Request a tour</h3>
           <p class="small">Fill the form and our agent will contact you within 24 hours.</p>
-          <form id="contactForm" action="mailto:gravitycon04@gmail.com" method="post" enctype="text/plain">
+          <form id="contactForm" action="mailto:amartaree@gmail.com" method="post" enctype="text/plain">
             <input type="text" name="name" placeholder="Your name" required>
             <input type="tel" name="phone" placeholder="Phone number" required>
             <input type="email" name="email" placeholder="Email (optional)">
@@ -245,7 +304,7 @@
 
           <div style="margin-top:0.8rem">
             <div style="font-weight:700;margin-bottom:0.25rem">Quick facts</div>
-            <div style="color:var(--muted);font-size:0.95rem">Built: 2018 • Plot: 1.2 acres • Water: well & lake access</div>
+            <div style="color:var(--muted);font-size:0.95rem">Built: 2025 • Plot: 1.2 acres • Water: well & lake access</div>
           </div>
         </div>
       </aside>
@@ -256,7 +315,7 @@
       <div style="display:flex;gap:1rem;align-items:center;justify-content:space-between;flex-wrap:wrap">
         <div>
           <h3 style="margin-bottom:6px">Location</h3>
-          <p style="color:var(--muted);max-width:680px">Peaceful lakeside village — approximate coordinates: 23°42'57.0"N, 87°42'40.8"E. Replace with your exact coordinates to show a live map here.</p>
+          <p style="color:var(--muted);max-width:680px">Peaceful Cottage— approximate coordinates: 23°42'57.0"N, 87°42'40.8"E.</p>
         </div>
     <div style="width:320px;height:180px;border-radius:8px;overflow:hidden;">
     <iframe
@@ -276,8 +335,8 @@
 
   <footer>
     <div class="wrap">
-      <div>© 2025 Amar Tori • <span style="color:var(--muted)">All rights reserved</span></div>
-      <div style="color:var(--muted)">Contact: gravitycon04@gmail.com • +91 98xxxxxxx</div>
+      <div>© 2025 Amar Taree • <span style="color:var(--muted)">All rights reserved</span></div>
+      <div style="color:var(--muted)">Contact: amartaree@gmail.com • +91 987654321</div>
     </div>
   </footer>
 
