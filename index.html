@@ -382,16 +382,16 @@ footer .wrap {
     document.getElementById('closeModal').addEventListener('click',()=>modal.classList.remove('show'));
     modal.addEventListener('click',(e)=>{ if(e.target===modal) modal.classList.remove('show') });
 
-    // Limit video playback time (10 seconds)
+// Ensure video plays correctly everywhere
+const vid = document.querySelector('.hero video');
 if (vid) {
-  const limitSeconds = 10;
-  vid.addEventListener('timeupdate', () => {
-    if (vid.currentTime >= limitSeconds) {
-      vid.pause();
-      vid.currentTime = 0;
-    }
+  vid.play().catch(() => {
+    // If autoplay is blocked (mobile/safari), unmute to enable play
+    vid.muted = true;
+    vid.play();
   });
 }
+
   </script>
 </body>
 </html>
